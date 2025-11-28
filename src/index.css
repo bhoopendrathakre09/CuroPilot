@@ -1,0 +1,85 @@
+@import "tailwindcss";
+/* If you're not on Tailwind v4, use instead:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+:root {
+  color-scheme: dark;
+  --cp-blue: #4f94ff;
+  --cp-red: #ef4444;
+  --cp-orange: #facc15;
+}
+
+.text-cp-blue {
+  color: var(--cp-blue);
+}
+
+.bg-cp-blue {
+  background-color: var(--cp-blue);
+}
+
+.bg-cp-red {
+  background-color: var(--cp-red);
+}
+
+.bg-cp-orange {
+  background-color: var(--cp-orange);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, #1f2738, transparent 45%),
+    radial-gradient(circle at 80% 0%, #421b3a, transparent 50%),
+    radial-gradient(circle at 50% 80%, #10212d, transparent 60%),
+    #040610;
+  min-height: 100vh;
+  color: #f7f9fb;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(7, 16, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 45px rgba(3, 8, 20, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.radial-grid {
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 0),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(circle at center, black, transparent 70%);
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060910;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4f94ff, #ef4444);
+  border-radius: 10px;
+}
