@@ -100,7 +100,7 @@ export default function Contact() {
 
             <div>
               <p className="font-semibold text-white">E-mail</p>
-              <p className="text-white/70">curopilot0904@gmail.com</p>
+              <p className="text-white/70">curopilot.info@gmail.com</p>
             </div>
 
             <div>
