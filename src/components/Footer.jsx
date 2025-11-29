@@ -44,7 +44,7 @@ export default function Footer() {
               <span className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-white/60" />
                 <a href="mailto:curopilot0904@gmail.com" className="hover:text-white transition">
-                  curopilot0904@gmail.com
+                  curopilot.info@gmail.com
                 </a>
               </span>
               <span className="flex items-center gap-2">
