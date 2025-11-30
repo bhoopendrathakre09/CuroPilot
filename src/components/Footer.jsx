@@ -11,14 +11,6 @@ const columnLinks = [
       { label: "Insights", to: "/insights" },
     ],
   },
-  {
-    heading: "Resources",
-    items: [
-     
-      { label: "Contact", to: "/contact" },
-     
-    ],
-  },
 ];
 
 const socials = [
