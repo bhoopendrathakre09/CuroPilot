@@ -15,7 +15,7 @@ const columnLinks = [
     heading: "Resources",
     items: [
      
-      { label: "Contact", to: "/contact" },
+      { label: "Contact", to: "/contact" }, 
      
     ],
   },
