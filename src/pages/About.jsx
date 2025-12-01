@@ -117,7 +117,7 @@ export default function About() {
               stories we collect, the stronger the case for adoption.
             </p>
             <a
-              href="/survey"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfGkkVotcqx20lT8k7sqlEi8TGp0Kwyi5oC5_OpJCYl_I5i9Q/viewform?usp=sharing&ouid=10807667"
               className="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-indigo-500 hover:bg-indigo-600 transition font-semibold"
             >
               Contribute via survey
