@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import SectionWrapper from "../components/SectionWrapper";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import doctorScrambleImg from "../assets/ambulance1.png";
 import doctorScrambleImg1 from "../assets/ambulance2.png";
@@ -246,11 +247,24 @@ export default function Home() {
 
       {/* Problem Explanation */}
       <SectionWrapper id="problem" className="py-16 relative">
-      <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">What is the problem?</p>
-      <p className="text-white/80 mt-4 max-w-3xl text-center mx-auto">
-              When a medical emergency happens, every minute matters. Yet most hospitals start from zero because they
-              receive patients with no prior information.
-            </p>
+        <Helmet>
+          <title>CuroPilot | Home – Emergency Coordination Platform</title>
+          <meta name="description" content="CuroPilot is your trusted emergency coordination platform connecting ambulances, hospitals, and citizens to save precious Golden Hour minutes and improve survival rates." />
+          <link rel="canonical" href="https://curopilot.com/" />
+          <meta property="og:title" content="CuroPilot | Home – Emergency Coordination Platform" />
+          <meta property="og:description" content="CuroPilot is your trusted emergency coordination platform connecting ambulances, hospitals, and citizens to save precious Golden Hour minutes and improve survival rates." />
+          <meta property="og:url" content="https://curopilot.com/" />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="CuroPilot | Home – Emergency Coordination Platform" />
+          <meta name="twitter:description" content="CuroPilot is your trusted emergency coordination platform connecting ambulances, hospitals, and citizens to save precious Golden Hour minutes and improve survival rates." />
+        </Helmet>
+
+        <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">What is the problem?</p>
+        <p className="text-white/80 mt-4 max-w-3xl text-center mx-auto">
+          When a medical emergency happens, every minute matters. Yet most hospitals start from zero because they
+          receive patients with no prior information.
+        </p>
         <div className="absolute inset-0 opacity-20">
           <img
             src="https://images.unsplash.com/photo-1504814532849-cffc114e7213?auto=format&fit=crop&w=1600&q=80"
@@ -261,7 +275,7 @@ export default function Home() {
         </div>
         <div className="relative max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
           <div>
-           
+
             <div className="mt-6 space-y-5">
               {problemPoints.map((item) => (
                 <div key={item.heading} className="glass p-5 rounded-2xl border border-white/10">
@@ -277,7 +291,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-            
+
 
           <div className="grid gap-6 mt-10">
             {problemImages.map((item) => (
@@ -292,33 +306,33 @@ export default function Home() {
             ))}
           </div>
         </div>
-          <div className="mt-8 w-full flex gap-4 flex-wrap items-center justify-center relative z-20">
+        <div className="mt-8 w-full flex gap-4 flex-wrap items-center justify-center relative z-20">
 
-  {/* GOOGLE FORM BUTTON */}
-  <a
-    href="https://forms.gle/vd22QhuiXxDTh3e59"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-block px-6 py-3 rounded-xl bg-cp-red hover:brightness-105 transition font-semibold cursor-pointer select-none text-center"
-  >
-    Share your experience
-  </a>
+          {/* GOOGLE FORM BUTTON */}
+          <a
+            href="https://forms.gle/vd22QhuiXxDTh3e59"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block px-6 py-3 rounded-xl bg-cp-red hover:brightness-105 transition font-semibold cursor-pointer select-none text-center"
+          >
+            Share your experience
+          </a>
 
-  {/* INTERNAL ROUTE BUTTON */}
-  <Link
-    to="/golden-hour"
-    className="inline-block px-6 py-3 rounded-xl border border-white/20 text-white/90 hover:bg-white/10 transition font-semibold cursor-pointer select-none text-center"
-  >
-    Understand the Golden Hour
-  </Link>
+          {/* INTERNAL ROUTE BUTTON */}
+          <Link
+            to="/golden-hour"
+            className="inline-block px-6 py-3 rounded-xl border border-white/20 text-white/90 hover:bg-white/10 transition font-semibold cursor-pointer select-none text-center"
+          >
+            Understand the Golden Hour
+          </Link>
 
-</div>
+        </div>
 
       </SectionWrapper>
 
       {/* Why this matters */}
       <SectionWrapper className="py-16 ">
-      <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Why this matters</p>
+        <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Why this matters</p>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-10">
             <p className="text-white/80 mt-3 max-w-2xl mx-auto">
@@ -347,10 +361,10 @@ export default function Home() {
 
       {/* Section 5 Survey */}
       <SectionWrapper id="survey" className="py-16 ">
-      
+
         <div className="max-w-5xl mx-auto px-6 text-center glass rounded-3xl p-10 border border-white/10">
           <p className="text-white/80 mt-4">
-          <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Help us with 2 minutes of your time</p>
+            <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Help us with 2 minutes of your time</p>
             Section 5 introduces the survey. Share an emergency where time was lost, confusion took over, or the Golden
             Hour slipped away. Your story gives us the data to prove why CuroPilot must exist.
           </p>
@@ -367,10 +381,10 @@ export default function Home() {
 
       {/* Testimonials / stories */}
       <SectionWrapper className="py-16 ">
-      <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Voices from the field</p>
+        <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Voices from the field</p>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-10">
-            
+
             <p className="text-white/80 mt-3">Anonymous stories that reveal how delays cost minutes.</p>
           </div>
 
@@ -399,7 +413,7 @@ export default function Home() {
 
       {/* Final CTA Section 8 */}
       <SectionWrapper className="py-16 ">
-      <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Let’s build CuroPilot with the people who need it most</p>
+        <p className="text-sm md:text-xl uppercase text-center tracking-[0.4em] text-white/60 mb-10">Let’s build CuroPilot with the people who need it most</p>
         <div className="max-w-6xl mx-auto px-6">
           <div className="rounded-3xl p-10 bg-linear-to-r from-cp-blue/80 to-cp-red/80 shadow-2xl flex flex-col gap-6 md:flex-row md:items-center md:justify-between border border-white/10">
             <div className="max-w-2xl">
